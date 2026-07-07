@@ -75,6 +75,8 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: ${{ inputs.repository }}
+          fetch-depth: 0
+          fetch-tags: true
           path: openwrt
           ref: ${{ inputs.branch }}
           token: ${{ secrets.OPENWRT_PAT }}
